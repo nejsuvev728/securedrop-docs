@@ -1,0 +1,419 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOd1UgaOpYmKYDuiCnL6pbz",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/nejsuvev728/securedrop-docs/blob/main/AI_ML%20-%20Python%20practice\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8AoVSZsnafBW",
+        "outputId": "98e690c3-d00b-47ba-b2c9-46494dc28844"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "B\n"
+          ]
+        }
+      ],
+      "source": [
+        "#when to use list or a dictionary -\n",
+        "\n",
+        "\n",
+        "\n",
+        "grade={\"soham\":\"a\",\"vihaan\":\"B\",\"pratap\":\"c\"}. #dictionary\n",
+        "print(grade[\"vihaan\"])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grade_list = [[\"soham\",\"A\"],\n",
+        "              [\"Vihaan\",\"B\"],\n",
+        "              [\"pratap\",\"C\"]].    #here s[0] means soham , vihaan , pratap and if it matches vihaan print s[1] that is the grade\n",
+        "for s in grade_list:\n",
+        "  if s[0]== \"Vihaan\":\n",
+        "    print(s[1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gMvySgZxgnB7",
+        "outputId": "006196d6-68fd-4807-8a1b-37525d7de609"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "B\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "as dictionary directly jumps to vihaan , ie desired thing , where as list goes through every thing in list until it finds the desired one , so dictionary is preffered as its faster ."
+      ],
+      "metadata": {
+        "id": "b-HiPekGicKO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "- if we want to order things according to the position or order (ie, 1st , 2nd, ....) - We use \"LIST\"\n",
+        "\n",
+        "- if we want to order thingd based of its name we use \"DICTIONARY\""
+      ],
+      "metadata": {
+        "id": "XY27tlCZkeis"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#transformation of list -\n",
+        "\n",
+        "\n",
+        "score = [22,45,67,34,63,99,12,49]\n",
+        "new_score=[]\n",
+        "\n",
+        "for s in score:\n",
+        "  if s>=45:\n",
+        "    new_score.append(s)\n",
+        "            # APPEND is used to add elements at the end of the list\n",
+        "print(new_score)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "90fbc278-c39e-4c10-c8be-cde4b7cc5661",
+        "id": "tgtvlLdYsTac"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[45, 67, 63, 99, 49]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "temp_C=[15,38,22,41,9,33]\n",
+        "for temp in temp_C:\n",
+        "  if temp > 35:\n",
+        "    temp_F=(temp*9/5)+32\n",
+        "    print(temp_F)\n",
+        "  else:\n",
+        "    print(\"temperature is lower than 35 degree celcius\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ECKqEMGeuOps",
+        "outputId": "48238c79-a87b-4fd1-ada4-48c46c4d8457"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "temperature is lower than 35 degree celcius\n",
+            "100.4\n",
+            "temperature is lower than 35 degree celcius\n",
+            "105.8\n",
+            "temperature is lower than 35 degree celcius\n",
+            "temperature is lower than 35 degree celcius\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "orders =[\n",
+        "    {\"name\":\"ananya\",\"score\":78},  #order1\n",
+        "    {\"name\":\"rahul\",\"score\":55},   #order2\n",
+        "    {\"name\":\"priya\",\"score\":34},   #order3\n",
+        "    {\"name\":\"ananya\",\"score\":100},  #order4\n",
+        "    {\"name\":\"rahul\",\"score\":800}   #order5\n",
+        "]\n",
+        "\n",
+        "total_order={}\n",
+        "for order in orders:\n",
+        "  customer=order[\"name\"]\n",
+        "  amount=order[\"score\"]\n",
+        "\n",
+        "  if customer in total_order:\n",
+        "    total_order[customer]=total_order[customer]+amount\n",
+        "  else:\n",
+        "    total_order[customer]=amount\n",
+        "\n",
+        "print(total_order)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oSiFg-cFwiA3",
+        "outputId": "39894366-acdf-4655-b411-2346ba2c8f19"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'ananya': 600, 'rahul': 1500, 'priya': 300}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "SAMPLE_TICKETS = [\n",
+        "    {\"agent\": \"Agent_A\", \"resolution_minutes\": 30},\n",
+        "    {\"agent\": \"Agent_B\", \"resolution_minutes\": 45},\n",
+        "    {\"agent\": \"Agent_A\", \"resolution_minutes\": -5},\n",
+        "    {\"agent\": \"Agent_B\", \"resolution_minutes\": 20},\n",
+        "    {\"agent\": \"Agent_A\", \"resolution_minutes\": 15},\n",
+        "    {\"agent\": \"Agent_C\", \"resolution_minutes\": 0},\n",
+        "]\n",
+        "\n",
+        "def build_report(tickets):\n",
+        "    totals = {}\n",
+        "\n",
+        "\n",
+        "    for ticket in tickets:\n",
+        "        minutes = ticket[\"resolution_minutes\"]       #assignment for this lecture\n",
+        "        if minutes <= 0:\n",
+        "            continue\n",
+        "\n",
+        "        agent = ticket[\"agent\"]\n",
+        "        if agent in totals:\n",
+        "            totals[agent] += minutes\n",
+        "        else:\n",
+        "            totals[agent] = minutes\n",
+        "\n",
+        "\n",
+        "    lines = []\n",
+        "    for agent, total in totals.items():\n",
+        "        lines.append(f\"{agent}: {total}\")\n",
+        "\n",
+        "    return \"\\n\".join(lines)\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    print(build_report(SAMPlE_TICKET))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lkvJ4HgaqAwB",
+        "outputId": "1650f694-0d2c-429a-a2b1-881019358b45"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Agent_A: 45\n",
+            "Agent_B: 65\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "SAMPLE_TICKETS = [\n",
+        "    {\"agent\": \"Agent_A\", \"resolution_minutes\": 30},\n",
+        "    {\"agent\": \"Agent_B\", \"resolution_minutes\": 45},\n",
+        "    {\"agent\": \"Agent_A\", \"resolution_minutes\": -5},\n",
+        "    {\"agent\": \"Agent_B\", \"resolution_minutes\": 20},\n",
+        "    {\"agent\": \"Agent_A\", \"resolution_minutes\": 15},\n",
+        "    {\"agent\": \"Agent_C\", \"resolution_minutes\": 0},\n",
+        "]\n",
+        "\n",
+        "def build_report(tickets):\n",
+        "    totals = {}\n",
+        "    for ticket in tickets:\n",
+        "        agent = ticket[\"agent\"]\n",
+        "        resolution_time = ticket[\"resolution_minutes\"]\n"
+      ],
+      "metadata": {
+        "id": "KlBwtA8gh5Uq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "To print in a single line, we use the print bracket outside the iteration, but if we want to print in columns, we use the iteration, that is, for is in and so on."
+      ],
+      "metadata": {
+        "id": "97Hg98pm6M8A"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "students =[\n",
+        "    {\"name\":\"ananya\",\"score\":78},  #order1\n",
+        "    {\"name\":\"rahul\",\"score\":55},   #order2\n",
+        "    {\"name\":\"priya\",\"score\":34},   #order3\n",
+        "    ]\n",
+        "\n",
+        "report_lines=[]\n",
+        "for s in students :\n",
+        "  name = s[\"name\"]\n",
+        "  score = s[\"score\"]\n",
+        "  line = name + \":\"+str(score)\n",
+        "  report_lines.append(line)\n",
+        "\n",
+        "print(report_lines)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d385eebe-05d6-4daf-bd5f-c9c3cbed65f2",
+        "id": "AbH-XkCa6x4g"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['ananya:78', 'rahul:55', 'priya:34']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "students =[\n",
+        "    {\"name\":\"ananya\",\"score\":78},  #order1\n",
+        "    {\"name\":\"rahul\",\"score\":55},   #order2\n",
+        "    {\"name\":\"priya\",\"score\":34},   #order3\n",
+        "    ]\n",
+        "\n",
+        "report_lines=[]\n",
+        "for s in students :\n",
+        "  name = s[\"name\"]\n",
+        "  score = s[\"score\"]\n",
+        "  line = name + \":\"+str(score)\n",
+        "  report_lines.append(line)\n",
+        "\n",
+        "final_report= \"\\n\".join(report_lines). # this is used to print each output in single line individually instead of iteration\n",
+        "print(final_report)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UUJlboaz8si1",
+        "outputId": "9e029489-e064-4b6a-fd36-61f3240f763a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ananya:78\n",
+            "rahul:55\n",
+            "priya:34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "words = [\"apple\",\"banana\",\"cherry\",\"apple\",\"banana\",\"apple\"]\n",
+        "\n",
+        "fruit_counts = {}\n",
+        "for s in words:\n",
+        "  if s in fruit_counts:\n",
+        "    fruit_counts[s] = fruit_counts[s] + 1\n",
+        "  else:\n",
+        "    fruit_counts[s] = 1\n",
+        "\n",
+        "\n",
+        "formatted_counts = []\n",
+        "for fruit, count in fruit_counts.items():\n",
+        "  formatted_counts.append(f\"{fruit}: {count}\")\n",
+        "\n",
+        "# Join the formatted strings with newlines\n",
+        "final_count = \"\\n\".join(formatted_counts)\n",
+        "print(final_count)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EzqpL27d8Z-k",
+        "outputId": "41b42962-7b74-4acb-be82-705b893f85b1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "apple: 3\n",
+            "banana: 2\n",
+            "cherry: 1\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
